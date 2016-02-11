@@ -12,18 +12,9 @@
         document.addEventListener( 'pause', onPause.bind( this ), false );
         document.addEventListener( 'resume', onResume.bind( this ), false );
         
-        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
     };
 
-
-    function gotFS(fileSystem) {
-        //fileSystem.root.getFile("events.json", null, gotFileEntry, fail);
-    }
-
-    function fail(error) {
-        //console.log(error.code);
-    }
 
     function onPause() {
         // TODO: This application has been suspended. Save application state here.
