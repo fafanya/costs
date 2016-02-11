@@ -1,7 +1,9 @@
 ﻿<div>
     <div>Main Page</div>
+    <div>----------------</div>
     <a href="#add_event_page">Add Event</a>
+    <div>----------------</div>
     <div ng-repeat="e in events">
-        <a>{{ e.name }}</a>
+        <a href="" ng-click="viewEvent(e.id)">{{ e.name }}</a>
     </div>
 </div>

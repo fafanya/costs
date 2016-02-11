@@ -1,0 +1,12 @@
+﻿<div>
+    <div>Member Page</div>
+    <div>----------------</div>
+    <a href="#event_page">Event Page</a>
+    <div></div>
+    <a href="#add_pay_page">Add Pay</a>
+    <div>--------------</div>
+    <input type="hidden" ng-model="member_id" />
+    <div ng-repeat="p in pays | filter : { member_id : member_id }">
+        <a>{{ p.pay }}</a>
+    </div>
+</div>

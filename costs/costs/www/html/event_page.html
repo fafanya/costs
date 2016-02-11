@@ -1,0 +1,12 @@
+﻿<div>
+    <div>Event Page</div>
+    <div>----------------</div>
+    <a href="#main_page">All Events</a>
+    <div></div>
+    <a href="#add_member_page">Add Member</a>
+    <div>--------------</div>
+    <input type="hidden" ng-model="event_id"/>
+    <div ng-repeat="m in members | filter : { event_id : event_id }">
+        <a href="" ng-click="viewMember(m.id)">{{ m.name }}</a>
+    </div>
+</div>
