@@ -1,0 +1,22 @@
+﻿<div>
+    <div>Passage Page</div>
+    <div>----------------</div>
+    <a href="#main_page">Main Page</a>
+    <div></div>
+    <a href="#add_event_page">Add Event</a>
+    <div></div>
+    <a href="#add_member_page">Add Member</a>
+    <div>----------------</div>
+    <div>-----events-----</div>
+    <div ng-repeat="e in events">
+        <a href="" ng-click="viewEvent(e.id)">{{ e.name }}</a>
+        <a>   </a>
+        <a href="" ng-click="deleteEvent(e.id)">x</a>
+    </div>
+    <div>-----members----</div>
+    <div ng-repeat="m in members">
+        <a href="" ng-click="viewMember(m.id)">{{ m.name }}</a>
+        <a>   </a>
+        <a href="" ng-click="deleteMember(m.id)">x</a>
+    </div>
+</div>

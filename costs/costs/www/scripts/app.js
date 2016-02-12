@@ -3,7 +3,7 @@ mainApp.config(function ($routeProvider) {
     $routeProvider
     .when('/', {
         templateUrl: 'html/main_page.html',
-        controller: 'startController'
+        controller: 'mainController'
     })
     .when('/main_page', {
         templateUrl: 'html/main_page.html',
@@ -28,5 +28,17 @@ mainApp.config(function ($routeProvider) {
     .when('/add_pay_page', {
         templateUrl: 'html/add_pay_page.html',
         controller: 'addPayController'
+    })
+    .when('/passage_page', {
+        templateUrl: 'html/passage_page.html',
+        controller: 'passageController'
+    })
+    .when('/add_passage_page', {
+        templateUrl: 'html/add_passage_page.html',
+        controller: 'addPassageController'
+    })
+    .when('/add_member_to_event_page', {
+        templateUrl: 'html/add_member_to_event_page.html',
+        controller: 'addMemberToEventController'
     });
 });

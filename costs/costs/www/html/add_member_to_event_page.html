@@ -1,0 +1,11 @@
+﻿<div>
+    <div>Add Member To Event Page</div>
+    <div>----------------</div>
+    <a href="#main_page">Event Page</a>
+    <div></div>
+    <div>----------------</div>
+    <div>-----members----</div>
+    <div ng-repeat="m in members">
+        <a href="" ng-click="addMember(m.id)">{{ m.name }}</a>
+    </div>
+</div>

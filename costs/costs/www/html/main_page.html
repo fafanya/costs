@@ -1,9 +1,11 @@
 ﻿<div>
     <div>Main Page</div>
     <div>----------------</div>
-    <a href="#add_event_page">Add Event</a>
+    <a href="#add_passage_page">Add Passage</a>
     <div>----------------</div>
-    <div ng-repeat="e in events">
-        <a href="" ng-click="viewEvent(e.id)">{{ e.name }}</a>
+    <div ng-repeat="p in passages">
+        <a href="" ng-click="viewPassage(p.id)">{{ p.name }}</a>
+        <a>   </a>
+        <a href="" ng-click="deletePassage(p.id)">x</a>
     </div>
 </div>
