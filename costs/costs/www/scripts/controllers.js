@@ -12,6 +12,7 @@
 mainApp.controller('mainController', function ($scope, $http, $location){
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
+
         var db = window.openDatabase("costs.db", "1.0", "costs", 500000);
 
         db.transaction(function (transaction)
@@ -34,6 +35,9 @@ mainApp.controller('mainController', function ($scope, $http, $location){
         document.addEventListener("deviceready", onDeviceReady, false);
 
         function onDeviceReady() {
+
+            
+
             var db = window.openDatabase("costs.db", "1.0", "costs", 500000);
 
             db.transaction(function (transaction) {
