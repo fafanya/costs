@@ -1,22 +1,68 @@
-﻿<div>
-    <div>Passage Page</div>
-    <div>----------------</div>
-    <a href="#main_page">Main Page</a>
-    <div></div>
-    <a href="#add_event_page">Add Event</a>
-    <div></div>
-    <a href="#add_member_page">Add Member</a>
-    <div>----------------</div>
-    <div>-----events-----</div>
-    <div ng-repeat="e in events">
-        <a href="" ng-click="viewEvent(e.id)">{{ e.name }}</a>
-        <a>   </a>
-        <a href="" ng-click="deleteEvent(e.id)">x</a>
+﻿<div class="container">
+    <div class="page-header" id="banner">
+        <div class="row">
+            <div class="col-lg-8 col-md-7 col-sm-6">
+                <h1>Долги</h1>
+            </div>
+        </div>
     </div>
-    <div>-----members----</div>
-    <div ng-repeat="m in members">
-        <a href="" ng-click="viewMember(m.id)">{{ m.name }}</a>
-        <a>   </a>
-        <a href="" ng-click="deleteMember(m.id)">x</a>
+</div>
+<div class="container">
+    <div class="col-lg-6 col-lg-offset-3 text-center">
+        <h1>СТРАНИЦА МЕРОПРИЯТИЯ</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3" style="border-right: 2px solid #c29bf3;">
+            <h3>Меню:</h3>
+            <div></div>
+            <a href="#">[ На главную ]</a>
+            <div></div>
+            <a href="#add_event_page">[ Добавить событие ]</a>
+            <div></div>
+            <a href="#add_member_page">[ Добавить участника ]</a>
+            <div></div>
+            <a href="#add_debt_page">[ Добавить долг ]</a>
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-3">
+                    <h4>Участники:</h4>
+                    <div></div>
+                    <div ng-repeat="m in members" style="border-right: 1px solid #c29bf3;">
+                        <p>
+                            <a href="" ng-click="viewMember(m.id)">{{ m.name }}</a>    
+                            <a href="" ng-click="deleteMember(m.id)" style="color:red;">[x]</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h4>События:</h4>
+                    <div></div>
+                    <div ng-repeat="e in events" style="border-right: 1px solid #c29bf3;">
+                        <p>
+                            <a href="" ng-click="viewEvent(e.id)">{{ e.name }}</a>    
+                            <a href="" ng-click="deleteEvent(e.id)" style="color:red;">[x]</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h4>Брали в долг:</h4>
+                    <div ng-repeat="c in custom_debts" style="border-right: 1px solid #c29bf3;">
+                        <p>
+                            {{ c.name1 }} -> {{ c.name2 }} : {{ c.amount }}
+                            <a href="" ng-click="deleteDebt(c.id)" style="color:red;">[x]</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h4>Итого:</h4>
+                    <div ng-repeat="d in debts" style="border-right: 1px solid #c29bf3;">
+                        <p>{{ d.who }} -> {{ d.whom }} : {{ d.amount }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

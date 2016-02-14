@@ -1,0 +1,50 @@
+﻿<div class="container">
+    <div class="page-header" id="banner">
+        <div class="row">
+            <div class="col-lg-8 col-md-7 col-sm-6">
+                <h1>Долги</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="col-lg-6 col-lg-offset-3 text-center">
+        <h1>Добавление долга</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3" style="border-right: 2px solid #c29bf3;">
+            <h3>Меню:</h3>
+            <div></div>
+            <a href="#passage_page">[ К мероприятию ]</a>
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3>Долг:</h3>
+                    <div></div>
+                    <div class="form-group">
+                        <label for="who_members">Должник:</label>
+                        <select class="form-control" name="who_members" id="who_members"
+                                ng-model="selectedwho"
+                                ng-options="member.name for member in who_members track by member.id"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="whom_members">одолжил у:</label>
+                        <select class="form-control" name="whom_members" id="whom_members"
+                                ng-model="selectedwhom"
+                                ng-options="member.name for member in whom_members track by member.id"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">сумму:</label>
+                        <input class="form-control" type="text" id="amount" />
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-success" ng-click="addDebt()">Добавить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,12 +1,32 @@
-﻿<div>
-    <div>Member Page</div>
-    <div>----------------</div>
-    <a href="#event_page">Event Page</a>
-    <div></div>
-    <a href="#add_pay_page">Add Pay</a>
-    <div>--------------</div>
-    <input type="hidden" ng-model="member_id" />
-    <div ng-repeat="p in pays | filter : { member_id : member_id }">
-        <a>{{ p.pay }}</a>
+﻿<div class="container">
+    <div class="page-header" id="banner">
+        <div class="row">
+            <div class="col-lg-8 col-md-7 col-sm-6">
+                <h1>Долги</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="col-lg-6 col-lg-offset-3 text-center">
+        <h1>Страница цчастника</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3" style="border-right: 2px solid #c29bf3;">
+            <h3>Меню:</h3>
+            <div></div>
+            <a href="#event_page">[ К событию ]</a>
+            <div></div>
+            <a href="#add_pay_page">[ Добавить оплату ]</a>
+        </div>
+        <div class="col-md-9">
+            <h3>Оплаты:</h3>
+            <div></div>
+            <div ng-repeat="p in pays">
+                <a>{{ p.amount }}</a>
+            </div>
+        </div>
     </div>
 </div>

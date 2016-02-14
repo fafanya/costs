@@ -40,5 +40,9 @@ mainApp.config(function ($routeProvider) {
     .when('/add_member_to_event_page', {
         templateUrl: 'html/add_member_to_event_page.html',
         controller: 'addMemberToEventController'
+    })
+    .when('/add_debt_page', {
+        templateUrl: 'html/add_debt_page.html',
+        controller: 'addDebtController'
     });
 });

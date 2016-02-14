@@ -1,10 +1,38 @@
-﻿<div>
-    <div>Add Pay Page</div>
-    <div>----------------</div>
-    <a href="#member_page">Event Page</a>
-    <div>----------------</div>
-    <div>
-        Name: <input type="text" id="pay" />
-        <button ng-click="addPay()">Add</button>
+﻿<div class="container">
+    <div class="page-header" id="banner">
+        <div class="row">
+            <div class="col-lg-8 col-md-7 col-sm-6">
+                <h1>Долги</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="col-lg-6 col-lg-offset-3 text-center">
+        <h1>Добавление оплаты</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3" style="border-right: 2px solid #c29bf3;">
+            <h3>Меню:</h3>
+            <div></div>
+            <a href="#member_page">[ К участнику ]</a>
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3>Событие:</h3>
+                    <div></div>
+                    <div class="form-group">
+                        <label for="amount">Сумма:</label>
+                        <input class="form-control" type="text" id="amount" />
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-success" ng-click="addPay()">Добавить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

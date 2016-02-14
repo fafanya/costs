@@ -1,11 +1,34 @@
-﻿<div>
-    <div>Add Member To Event Page</div>
-    <div>----------------</div>
-    <a href="#main_page">Event Page</a>
-    <div></div>
-    <div>----------------</div>
-    <div>-----members----</div>
-    <div ng-repeat="m in members">
-        <a href="" ng-click="addMember(m.id)">{{ m.name }}</a>
+﻿<div class="container">
+    <div class="page-header" id="banner">
+        <div class="row">
+            <div class="col-lg-8 col-md-7 col-sm-6">
+                <h1>Долги</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="col-lg-6 col-lg-offset-3 text-center">
+        <h1>Добавление участника к событию</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3" style="border-right: 2px solid #c29bf3;">
+            <h3>Меню:</h3>
+            <div></div>
+            <a href="#event_page">[ К событию ]</a>
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3>Событие:</h3>
+                    <div></div>
+                    <div ng-repeat="m in members">
+                        <a href="" ng-click="addMember(m.id)">{{ m.name }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
