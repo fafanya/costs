@@ -51,6 +51,14 @@ mainApp.controller('mainController', function ($scope, $http, $location){
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
 
+        /*window.sqlitePlugin.echoTest(
+            function success(lol) {
+                var t = 1 + 1;
+            }
+        , function error(lal) {
+            var k = 1 + 1;
+        });*/
+
         var db = window.openDatabase("costs.db", "1.0", "costs", 500000);
 
         db.transaction(function (transaction)
