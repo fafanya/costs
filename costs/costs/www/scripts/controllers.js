@@ -50,11 +50,15 @@ function countDebts(b) {
 mainApp.controller('mainController', function ($scope, $http, $location){
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
-
-
-        /*var db = window.openDatabase("lul.db", "1.0", "luls", 500000);
+        var db = window.openDatabase("costs.db", "1.0", "costs", 500000);
         db.transaction(function (transaction) {
-            transaction.executeSql('CREATE TABLE IF NOT EXISTS phonegap_pro (id integer primary key, title text, desc text)'
+            transaction.executeSql(
+                'CREATE TABLE IF NOT EXISTS pay (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, member_event_id INTEGER NOT NULL, amount REAL);'+
+                'CREATE TABLE IF NOT EXISTS passage (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, name TEXT NOT NULL);'+
+                'CREATE TABLE IF NOT EXISTS member_event_link (id	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, member_id INTEGER NOT NULL, event_id INTEGER NOT NULL);' +
+                'CREATE TABLE IF NOT EXISTS member (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,passage_id INTEGER NOT NULL, name TEXT NOT NULL);' +
+                'CREATE TABLE IF NOT EXISTS event (id	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,passage_id INTEGER NOT NULL, name	TEXT NOT NULL);' +
+                'CREATE TABLE IF NOT EXISTS debt (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,passage_id	INTEGER NOT NULL,who_member_id INTEGER NOT NULL, whom_member_id	INTEGER NOT NULL, amount REAL NOT NULL);'
             , [], function (tx, results) {
                 $scope.$apply(function () {
                     var t = results;
@@ -62,19 +66,9 @@ mainApp.controller('mainController', function ($scope, $http, $location){
             }, function (error) {
                 var er = error;
             });
-        });*/
-
-
-        /*window.sqlitePlugin.echoTest(
-            function success(lol) {
-                var t = 1 + 1;
-            }
-        , function error(lal) {
-            var k = 1 + 1;
-        });*/
+        });
 
         var db = window.openDatabase("costs.db", "1.0", "costs", 500000);
-
         db.transaction(function (transaction)
         {
             transaction.executeSql('SELECT * FROM passage', [], function (tx, results)
