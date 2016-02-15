@@ -51,6 +51,20 @@ mainApp.controller('mainController', function ($scope, $http, $location){
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
 
+
+        /*var db = window.openDatabase("lul.db", "1.0", "luls", 500000);
+        db.transaction(function (transaction) {
+            transaction.executeSql('CREATE TABLE IF NOT EXISTS phonegap_pro (id integer primary key, title text, desc text)'
+            , [], function (tx, results) {
+                $scope.$apply(function () {
+                    var t = results;
+                });
+            }, function (error) {
+                var er = error;
+            });
+        });*/
+
+
         /*window.sqlitePlugin.echoTest(
             function success(lol) {
                 var t = 1 + 1;
